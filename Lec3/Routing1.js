@@ -11,4 +11,10 @@ app.get('/', function (req, res) {
 });
 
 // Make the server listen on port 3000
+
+
+app.get('/aboutme',function (req,res) {
+        res.send("Hi Guys i am Vishal Kumar i am learning Node and Express how Backend Work")    
+})
+
 app.listen(3000);
