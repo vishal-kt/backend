@@ -4,7 +4,7 @@ const app = express()
 app.set("view engine","ejs");
 
 app.get("/",function (req,res) {
-    res.render("index", {Home:"🏠",Contact:"📞", Info :"ℹ"});
+    res.render("index", {Home:"🏠",Contact:"📞", Info :"ℹ",About:"🤵"});
 });
 
 app.listen(3000, function () {
