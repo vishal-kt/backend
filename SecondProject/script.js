@@ -8,8 +8,8 @@ app.use(express.static('./public'));
 
 
 app.get("/",function (req,res) {
-    res.render("index");
-
+    // res.render("index");
+    throw Error("i dnt Know ");
 });
 
 app.get("/error",function (req,res,next) {
