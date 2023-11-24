@@ -12,11 +12,22 @@ app.get("/",function (req,res) {
 
 });
 
+app.get("/error",function (req,res,next) {
+    throw Error("Something Went Wrong")    
+})
 
 app.get("/contact",function (req,res) {
    
 });
 
+
+app.use(function errorHandler(err,req,res,next) {
+    if(res.headersSent){
+        return next(err)
+    }
+    res.status(500)
+    res.render('error',{error:err})
+})
 
 app.listen(3000, function () {
     console.log("Server is running on port 3000");
